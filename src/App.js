@@ -1,3 +1,5 @@
+import axios from "axios";
+
 function App() {
   return (
     <div className="App">
@@ -6,7 +8,7 @@ function App() {
       <br />
       1.SearchBar.js <br />
       2.ImageList.js <br />
-      3. ImageCard.js <br />
+      3.ImageCard.js <br />
     </div>
   );
 }
