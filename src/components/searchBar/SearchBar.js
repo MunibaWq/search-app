@@ -13,7 +13,7 @@ const SearchBar = (props) => {
   return (
     <div className="ui segment">
       <form onSubmit={onFormSubmit}>
-        <div className="ui search icon input">
+        <div className="ui input icon input">
           <input
             className="prompt"
             type="text"
