@@ -1,13 +1,14 @@
+import React from "react";
 import axios from "axios";
 import "./App.css";
 import SearchBar from "./components/searchBar/SearchBar";
 
-function App() {
-  const onSearchSubmit = (input) => {
+const App = () => {
+  const onSearchSubmit = (inpt) => {
     //add axios to fetch data from API
     axios
       .get("https://api.unsplash.com/search/photos", {
-        params: { query: input },
+        params: { query: inpt },
         headers: {
           Authorization: process.env.REACT_APP_UNSPLASH_API_KEY,
         },
@@ -30,6 +31,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

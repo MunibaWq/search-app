@@ -2,21 +2,21 @@ import "./SearchBar.css";
 import React, { useState } from "react";
 
 const SearchBar = (props) => {
-  const [input, setInput] = useState("");
+  const [inpt, setInput] = useState("");
   //   console.log(input);
   const onFormSubmit = (e) => {
     e.preventDefault();
-    props.onSubmit(input);
+    props.onSubmit(inpt);
   };
 
   return (
     <div className="ui segment">
-      <form onSubmit={(e) => onFormSubmit}>
+      <form onSubmit={onFormSubmit}>
         <div className="ui search icon input">
           <input
             className="prompt"
             type="text"
-            value={input}
+            value={inpt}
             placeholder="Search..."
             onChange={(e) => setInput(e.target.value)}
           />
