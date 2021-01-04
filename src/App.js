@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import SearchBar from "./components/searchBar/SearchBar";
+import ImageList from "./components/imageList/ImageList";
 
 const App = () => {
   const [images, setImages] = useState([]);
@@ -22,6 +23,7 @@ const App = () => {
     <div className="App">
       <div className="ui container">
         <SearchBar onSubmit={onSearchSubmit} />
+        <ImageList images={images} />
         {/* We are going to add these components: <br />
       The search function props will be passed down from App.js
       <br />
