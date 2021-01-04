@@ -2,9 +2,10 @@ import React from "react";
 
 const ImageCard = (props) => {
   //   console.log(props);
+  const { description, urls } = props.image;
   return (
     <div>
-      <img alt={props.image.description} src={props.image.urls.regular} />
+      <img alt={description} src={urls.regular} />
     </div>
   );
 };
