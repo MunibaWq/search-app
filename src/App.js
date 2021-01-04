@@ -15,6 +15,7 @@ const App = () => {
         Authorization: process.env.REACT_APP_UNSPLASH_API_KEY,
       },
     });
+    // console.log(response);
     // console.log(response.data.results);
     setImages(response.data.results);
     // console.log(images);
@@ -24,7 +25,6 @@ const App = () => {
     <div className="App">
       <div className="ui container">
         <SearchBar onSubmit={onSearchSubmit} />
-        {images}
         <ImageList images={images} />
         {/* We are going to add these components: <br />
       The search function props will be passed down from App.js
