@@ -1,5 +1,9 @@
-.ui.search {
+.ui.segment {
   margin-top: 0.1rem;
   display: flex;
-  justify-items: center;
+  justify-content: center;
+}
+
+.search {
+  width: 50rem;
 }
