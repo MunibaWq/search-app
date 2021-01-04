@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import SearchBar from "./components/searchBar/SearchBar";
 
 const App = () => {
-  const onSearchSubmit = (inpt) => {
+  const [images, setImages] = useState([]);
+  const onSearchSubmit = async (inpt) => {
     //add axios to fetch data from API
-    axios
-      .get("https://api.unsplash.com/search/photos", {
-        params: { query: inpt },
-        headers: {
-          Authorization: process.env.REACT_APP_UNSPLASH_API_KEY,
-        },
-      })
-      .then((response) => {
-        console.log(response);
-      });
+    const response = await axios.get("https://api.unsplash.com/search/photos", {
+      params: { query: inpt },
+      headers: {
+        Authorization: process.env.REACT_APP_UNSPLASH_API_KEY,
+      },
+    });
+    console.log(response.data.results);
+    setImages(response.data.results);
+    console.log(images);
   };
 
   return (
