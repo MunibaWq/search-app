@@ -6,6 +6,7 @@ import ImageList from "./components/imageList/ImageList";
 
 const App = () => {
   const [images, setImages] = useState([]);
+
   const onSearchSubmit = async (inpt) => {
     //add axios to fetch data from API
     const response = await axios.get("https://api.unsplash.com/search/photos", {
@@ -14,16 +15,16 @@ const App = () => {
         Authorization: process.env.REACT_APP_UNSPLASH_API_KEY,
       },
     });
-    console.log(response.data.results);
+    // console.log(response.data.results);
     setImages(response.data.results);
-    console.log(images);
+    // console.log(images);
   };
 
   return (
     <div className="App">
       <div className="ui container">
         <SearchBar onSubmit={onSearchSubmit} />
-        {images.description}
+        {images}
         <ImageList images={images} />
         {/* We are going to add these components: <br />
       The search function props will be passed down from App.js

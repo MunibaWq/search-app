@@ -1,10 +1,10 @@
 import React from "react";
 
-const ImageCard = () => {
+const ImageCard = (props) => {
+  //   console.log(props);
   return (
     <div>
-      This is where i get the list of search results one at a time and make sure
-      they are visible
+      <img alt={props.image.description} src={props.image.urls.regular} />
     </div>
   );
 };
