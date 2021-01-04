@@ -23,6 +23,7 @@ const App = () => {
     <div className="App">
       <div className="ui container">
         <SearchBar onSubmit={onSearchSubmit} />
+        {images.description}
         <ImageList images={images} />
         {/* We are going to add these components: <br />
       The search function props will be passed down from App.js
