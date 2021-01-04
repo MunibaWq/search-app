@@ -3,9 +3,10 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="ui container">
-      <div className="ui search">
+    <div className="ui segment">
+      <div className="ui search icon input">
         <input className="prompt" type="text" placeholder="Search..." />
+        <i className="search icon"></i>
       </div>
     </div>
   );
