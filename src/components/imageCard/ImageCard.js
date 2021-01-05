@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const ImageCard = (props) => {
+  const [span, setSpan] = useState(0);
   //refs give access to a single DOM element
 
   const imageRef = useRef(0);
@@ -9,8 +10,10 @@ const ImageCard = (props) => {
   useEffect(() => {
     console.log(`this is imageRef`);
     console.log(imageRef);
+    console.log(imageRef.clientHeight);
     return () => {
-      <div>this is useEffect</div>;
+      const spans = imageRef.clientHeight;
+      console.log(spans);
     };
   });
   return (
