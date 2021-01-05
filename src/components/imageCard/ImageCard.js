@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 const ImageCard = (props) => {
   const { description, urls } = props.image;
   const [span, setSpan] = useState(0);
-  const imageRef = useRef(0);
+  const imageRef = useRef();
 
   useEffect(() => {
     imageRef.current.addEventListener("load", setSpanValue);
