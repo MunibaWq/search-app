@@ -9,11 +9,10 @@ const ImageCard = (props) => {
 
   useEffect(() => {
     console.log(`this is imageRef`);
-    console.log(imageRef);
-    console.log(imageRef.clientHeight);
+    console.log(imageRef.current);
+    console.log(imageRef.current.clientHeight);
     return () => {
-      const spans = imageRef.clientHeight;
-      console.log(spans);
+      const spans = imageRef.current.clientHeight;
     };
   });
   return (
