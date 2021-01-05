@@ -4,7 +4,7 @@ const ImageCard = (props) => {
   //   console.log(props);
   const { description, urls } = props.image;
   return (
-    <div>
+    <div className="image-card">
       <img alt={description} src={urls.regular} />
     </div>
   );
