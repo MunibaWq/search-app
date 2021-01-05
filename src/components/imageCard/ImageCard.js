@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const ImageCard = (props) => {
-  //   console.log(props);
+  //refs give access to a single DOM element
+
+  const imageRef = useRef(0);
   const { description, urls } = props.image;
+
+  useEffect(() => {
+    console.log(`this is imageRef`);
+    console.log(imageRef);
+    return () => {
+      <div>this is useEffect</div>;
+    };
+  });
   return (
     <div className="image-card">
-      <img alt={description} src={urls.regular} />
+      <img ref={imageRef} alt={description} src={urls.regular} />
     </div>
   );
 };
