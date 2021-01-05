@@ -4,7 +4,11 @@ import ImageCard from "../imageCard/ImageCard";
 
 const ImageList = ({ images }) => {
   const imageList = images.map((image) => {
-    return <ImageCard key={image.id} image={image} />;
+    return (
+      <div className="list-container" key={image.id}>
+        <ImageCard image={image} />
+      </div>
+    );
   });
   return <div className="image-list">{imageList}</div>;
 };
